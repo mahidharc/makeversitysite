@@ -20,6 +20,49 @@
     </nav>
 </div>
 
+<div class="slider">
+    <div id="1" class="slide">
+        <a href="#">
+            <div class="slideoverlay"><p class="slidetext">Slide1</p></div>
+            <img src="images/slide1.png" alt="slide 1">
+        </a>
+    </div>
+    <div id="2" class="slide">
+        <a href="#">
+            <div class="slideoverlay"><p class="slidetext">Slide2</p></div>
+            <img src="images/slide2.png" alt="slide 2">
+        </a>
+    </div>
+    <div id="3" class="slide">
+        <a href="#">
+            <div class="slideoverlay"><p class="slidetext">Slide3</p></div>
+            <img src="images/slide3.png" alt="slide 3">
+        </a>
+    </div>
+    <div id="4" class="slide">
+        <a href="#">
+            <div class="slideoverlay"><p class="slidetext">Slide4</p></div>
+            <img src="images/slide4.png" alt="slide 4">
+        </a>
+    </div>
+</div>
+
 <script src="js/jquery.min.js"></script>
+<script>
+
+$(document).ready(function() {
+        var sliderCount = $('.slider .slide').size();
+        var currentSlider = 1;
+        setInterval(function() {
+            $('#'+currentSlider).fadeIn(500).delay(3000).fadeOut(500);
+            if(currentSlider===sliderCount){
+            currentSlider = 1;
+            } else {
+            currentSlider = currentSlider + 1;
+            }
+            }, 4000);
+        });
+
+</script>
 </body>
 </html>
