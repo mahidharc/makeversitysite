@@ -2,19 +2,22 @@ body{
     margin: 0;
 }
 
+/*-----------------------------*/
+/*----- Top Header Styles -----*/
+/*-----------------------------*/
+
 .header {
     background-color: #aaaaaa;
     overflow: hidden;
 }
 
 .logo{
-    float: left;
-    padding: 1.2% 1% 0.8% 1%
+    float: none;
+    padding: 1.2% 1% 0.8% 1.2%
 }
 
 nav {
     float: right;
-    padding-top: 3.5%;
     padding-right: 1%;
 }
 
@@ -30,23 +33,116 @@ nav ul li {
 nav ul li a {
     font-family: "DejaVu Sans", Helvetica, Arial, sans;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1em;
     color: #000000;
+    padding: 5px;
+    border: 1px solid;
 }
 
 nav ul li a:hover {
     font-family: "DejaVu Sans", Helvetica, Arial, sans;
     text-decoration: none;
-    color: #ff0000;
+    background-color: #dddddd;
+    color: #000000;
 }
 
 .active {
-    padding: 8px;
     background-color: #dddddd;
 }
 
+.menu-trigger {
+    display: none;
+    font-family: "DejaVu Sans", Helvetica, Arial, sans;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #000000;
+}
+
+/*Phone style*/
+@media screen and (max-width: 767px) {
+
+    .logo{
+        float: none;
+        height: 40px;
+        padding: 2%;
+    }
+
+    .logo img {
+        width: auto;
+        height: 100%;
+        margin: 0% 44.3%;
+    }
+
+    .menu-trigger {
+        display: block;
+        height: 30px;
+    }
+    
+    .hamburger-menu {
+       margin: 1% auto;
+       width:30px;
+       height:5px;
+       background-color:#111;
+       border-radius:5px;
+       position:relative;
+    }
+
+    .hamburger-menu:after, .hamburger-menu:before
+    {
+        content: '';
+        width: 100%;
+        height:5px;
+        background-color:#111;
+        position:absolute;
+        border-radius:5px;
+    }
+
+    .hamburger-menu:after
+    {
+        top:10px;
+    }
+
+    .hamburger-menu:before
+    {
+        top:20px;
+    }
+
+    nav {
+        float: none;
+        display: none;
+        padding: 0;
+    }
+
+    nav ul {
+        margin: 0;
+        padding-left: 0%;
+        padding-bottom: 0%
+    }
+
+    nav ul li{
+        padding-top: 0;
+    }
+
+    nav ul li a {
+        padding: 5;
+        border: none;
+        display: block;
+    }
+}
+
+/*Tablet style*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    nav ul li {
+        padding-left: 53.75px;
+    }
+}
+
+/*-------------------------*/
+/*----- Slider Styles -----*/
+/*-------------------------*/
+
 .slider {
-    height: 500px;
+    height:400px;
     width: 100%;
     overflow: hidden;
     margin: 0 auto;
@@ -63,13 +159,13 @@ nav ul li a:hover {
     position: absolute;
     background-color: #444;
     opacity: 0.6;
-    bottom: 54%;
+    bottom: 63.2%;
     color: white;
     width: 100%;
 }
 
 .slidetext {
-    font-size: 3em;
+    font-size: 2em;
     padding-right: 10%;
     float: right;
     font-family: "DejaVu Sans", Helvetica, Arial, sans;
