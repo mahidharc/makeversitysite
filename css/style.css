@@ -170,3 +170,47 @@ nav ul li a:hover {
     float: right;
     font-family: "DejaVu Sans", Helvetica, Arial, sans;
 }
+
+/*-------------------------*/
+/*----- Project Style -----*/
+/*-------------------------*/
+
+.projects-container {
+    
+}
+
+.project {
+    float: left;
+    width: 33.33%;
+}
+
+.project-image {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    padding: 5% 0% 2% 0%;
+}
+
+.project-text {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1% 0% 0% 0%;
+    font-family: "DejaVu Sans", Helvetica, Arial, sans;
+}
+
+/*Phone style*/
+@media screen and (max-width: 767px) {
+    .project {
+        float: none;
+        width: 100%;
+    }
+}
+
+/*Tablet style*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .project-text {
+        width: 70%;
+    }
+}
